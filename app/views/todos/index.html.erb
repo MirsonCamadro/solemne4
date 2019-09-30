@@ -1,2 +1,15 @@
-<h1>Todos#index</h1>
-<p>Find me in app/views/todos/index.html.erb</p>
+TODOOOOOS
+
+<% @todos.each_slice(3) do |tasks| %>
+    <div class="row m-2">
+    <% tasks.each do |task|%>
+        <div class="card m-3" style="width: 18rem;">
+        <%= image_tag task.photo, class:"card-img-top"%>
+            <div class="card-body">
+            <h5 class="card-title"><%= task.title%></h5>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <% end %>
+    </div> 
+<% end %>

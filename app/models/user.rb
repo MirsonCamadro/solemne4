@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   def load_task
     Task.all.each do |task|
-      Task.create(
+      Todo.create(
         task_id: task.id,
         user_id: self.id
       )
