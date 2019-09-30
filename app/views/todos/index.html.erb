@@ -1,4 +1,4 @@
-Mis tareas
+<h1 class="text-center"> Mis tareas </h1>
 
 <% @todos.each_slice(3) do |todos| %>
     <div class="row m-2">
@@ -11,9 +11,9 @@ Mis tareas
         <% end %>
             <div class="card-body">
                 <h5 class="card-title"><%= todo.task.title%></h5>
-                    <div class="btn-group " role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Basic example">
                             <% if todo.completed == true %>
-                                <%= link_to "No completado", todos_update_path(todo), method: :patch, class:"btn btn-danger" %>
+                                <%= link_to "No completado", todos_update_path(todo), method: :patch, class:"btn btn-danger"%>
                             <% else %>
                                 <%= link_to "Listo", todos_update_path(todo), method: :patch, class:"btn btn-primary" %>
                             <% end %>
@@ -21,6 +21,6 @@ Mis tareas
                     </div>
             </div>
         </div>
-        <% end %>
+    <% end %>
     </div> 
 <% end %>

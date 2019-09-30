@@ -1,16 +1,16 @@
-
+<h1 class="text-center"> Lista de tareas </h1>
 
 <% @tasks.each_slice(3) do |tasks| %>
     <div class="row m-2">
     <% tasks.each do |task|%>
         <div class="card m-3" style="width: 18rem;">
-        <%= image_tag task.photo, class:"card-img-top"%>
+            <%= image_tag task.photo, class:"card-img-top"%>
             <div class="card-body">
                 <h5 class="card-title"><%= task.title%></h5>
                 <%= link_to "Detalle", todos_show_path(task.id), class:"btn btn-primary" %>
             </div>
         </div>
-        <% end %>
+    <% end %>
     </div> 
 <% end %>
 
