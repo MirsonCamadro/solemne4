@@ -7,7 +7,7 @@
         <%= image_tag task.photo, class:"card-img-top"%>
             <div class="card-body">
                 <h5 class="card-title"><%= task.title%></h5>
-                <%= link_to "Detalle", todos_show_path(task.id) %>
+                <%= link_to "Detalle", todos_show_path(task.id), class:"btn btn-primary" %>
             </div>
         </div>
         <% end %>

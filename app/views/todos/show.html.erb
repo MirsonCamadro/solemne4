@@ -1,3 +1,13 @@
-<h1>Todos#show</h1>
-<p>Find me in app/views/todos/show.html.erb</p>
+<h3> <%= @todo_who.task.title %> </h3>
 
+<div class="row mt-5">
+    <div class="col">
+        <%= image_tag @todo_who.task.photo %>
+    </div>
+    <div class="col">
+        <h4> Lista de usuarios que han terminado la tarea : </h5> 
+        <% @todos_completed.each do |complete| %>
+        <li> <%= complete.user.email %> </li>
+        <% end %>
+    </div>
+</div>
